@@ -1,12 +1,12 @@
 def ask_for_number(secret_number):
-
     while True:
-        answer=input(f'Zgaduję: czy tą liczbą jest {secret_number}? ')
-        if answer=='za dużo':
+        answer = input(f'Zgaduję: czy tą liczbą jest {secret_number}? ')
+
+        if answer == 'za dużo':
             return 1
-        elif answer=='za mało':
+        elif answer == 'za mało':
             return -1
-        elif answer =='zgadłeś':
+        elif answer == 'zgadłeś':
             return 0
         else:
             print('Nie rozumiem!\nPodaj jedną z odpoiwdzi: za dużo, za mało, zgadłeś')
@@ -19,8 +19,6 @@ def guess_the_number2():
 
     while True:
         guess = int((max_number - min_number) / 2) + min_number
-
-        print(f'min={min_number} max={max_number}')
         answer = ask_for_number(guess)
 
         if answer == 1:
@@ -32,4 +30,5 @@ def guess_the_number2():
             break
 
 
-guess_the_number2()
+if __name__ == '__main__':
+    guess_the_number2()
