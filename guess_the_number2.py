@@ -19,6 +19,8 @@ def guess_the_number2():
 
     while True:
         guess = int((max_number - min_number) / 2) + min_number
+
+        print(f'min={min_number} max={max_number}')
         answer = ask_for_number(guess)
 
         if answer == 1:
@@ -28,3 +30,6 @@ def guess_the_number2():
         elif answer == 0:
             print('Wygrałem!')
             break
+
+
+guess_the_number2()
