@@ -1,4 +1,10 @@
 def ask_for_number(secret_number):
+    """the function gets the player's answers
+        and checks for errors
+
+        :param: integer
+        :return: integer
+        """
     while True:
         answer = input(f'Zgaduję: czy tą liczbą jest {secret_number}? ')
 
@@ -13,6 +19,8 @@ def ask_for_number(secret_number):
 
 
 def guess_the_number2():
+    """Main function Guess The Number 2"""
+
     print('Pomyśl liczbę od 0 do 1000 a sa ją zgadnę w max 10 próbach')
     min_number = 0
     max_number = 1000
